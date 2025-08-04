@@ -1,0 +1,15 @@
+---
+alwaysApply: false
+---
+# 03: Build path_utils.py
+
+Create `utils/path_utils.py` with:
+
+```python
+def ensure_dir(path: str):
+```
+This should:
+
+- Check if the path exists
+
+- Create it with `os.makedirs` if it doesn't

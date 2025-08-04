@@ -1,0 +1,9 @@
+---
+alwaysApply: false
+---
+# 01: Build config_loader.py
+
+Create `utils/config_loader.py` with a function `load_config(config_path="config.yaml") -> dict`. This should:
+- Load and parse the YAML config file
+- Raise an error if the file does not exist or has syntax errors
+- Return a nested dictionary

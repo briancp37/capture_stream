@@ -1,0 +1,57 @@
+---
+alwaysApply: false
+---
+# 05: Build capture_loop.py
+
+Add:
+
+```python
+def capture_frames_from_stream(stream_url: str, config: dict)
+def capture_frames_from_video(video_path: str, config: dict)
+```
+
+Both should:
+
+- Use OpenCV (`cv2.VideoCapture`)
+- Capture based on `config["capture"]["mode"]`
+- Save frames to `output_dir` using `frame_namer`
+- Log metadata if enabled
+- Call stubbed `forward_frame(frame_path)` if enabled
+
+Also add:```python
+def forward_frame(frame_path: str):
+    pass  # stub for now
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

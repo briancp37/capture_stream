@@ -1,0 +1,18 @@
+stream:
+  source_type: "twitch"              # Options: "twitch" or "video"
+  twitch_username: "briancp37"
+  video_path: "/path/to/video.mp4"
+  output_resolution: "1280x720"
+
+capture:
+  mode: "fps"                        # Options: "every_frame", "fps", "every_k"
+  fps: 4                            # Used if mode == "fps"
+  every_k: 30                        # Used if mode == "every_k"
+  save_frames: true
+  forward_to_analysis: false
+  log_metadata: true
+  skip_duplicates: true              # Skip duplicate frames using perceptual hashing
+  hash_threshold: 0                  # Hamming distance threshold (0 = exact match, higher = more lenient)
+
+paths:
+  output_dir: "../cfb_shared/screenshots"

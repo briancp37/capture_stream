@@ -1,0 +1,15 @@
+---
+alwaysApply: false
+---
+# 04: Build twitch_capture.py
+
+Add `get_twitch_stream_url(username: str) -> str` that uses `subprocess` to call:
+
+```bash
+streamlink --stream-url https://twitch.tv/{username} best
+```
+
+Return the resulting `.m3u8` stream URL.
+If `streamlink` fails, raise an error.
+
+

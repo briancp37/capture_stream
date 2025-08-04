@@ -1,0 +1,26 @@
+---
+alwaysApply: true
+---
+
+# Scope
+codegen
+
+# Directive
+Always write tests for new code unless explicitly told not to
+
+Use incremental development: write a test for a feature, then code to pass it
+
+For each step, write the failing test first, then the code, then run the test
+
+Loop: fix code until test passes, then move to next task
+# Scope
+codegen
+
+# Directive
+Always write tests for new code unless explicitly told not to
+
+Use incremental development: write a test for a feature, then code to pass it
+
+For each step, write the failing test first, then the code, then run the test
+
+Loop: fix code until test passes, then move to next task

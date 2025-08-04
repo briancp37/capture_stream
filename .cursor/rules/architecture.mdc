@@ -1,0 +1,52 @@
+---
+alwaysApply: true
+---
+# Architecture: capture_stream
+
+This package captures frames from a Twitch livestream or a local video file using flexible strategies.
+
+### Goals
+- Run identically on Jetson or MacBook
+- Save frames to a shared NFS mount for training or inference
+- Config-driven behavior with three capture strategies
+
+### Capture Modes
+- `"every_frame"`: Save every frame
+- `"fps"`: Save N frames per second
+- `"every_k"`: Save every k-th frame
+
+### Features
+- Support for Twitch and local file sources
+- Frame saving with timestamped filenames
+- Optional stub to forward frames for inference
+- CSV metadata logging of saved frames
+
+### Folder Layout
+```
+capture_stream/
+├── __init__.py  
+├── .cursor/
+│   └── rules/
+│       ├── architecture.mdc
+│       ├── composer-guidelines.mdc
+│       ├── cursor-rules.mdc
+│       ├── incremental-codegen.mdc
+│       ├── tasks.mdc
+│       ├── task01_issue_name.mdc
+│       ├── task02_issue_name.mdc
+├── config.yaml
+├── run.py
+├── twitch_capture.py
+├── capture_loop.py
+├── utils/
+│   ├── __init__.py
+│   ├── config_loader.py
+│   ├── frame_namer.py
+│   └── path_utils.py
+├── screenshots/ (shared NFS target)
+├── frame_log.csv
+├── architecture.mdc
+├── tasks.mdc
+└── issues/
+```
+

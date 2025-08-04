@@ -1,0 +1,18 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# Tasks for capture_stream
+
+Click on each task to open the implementation spec in Cursor.
+
+## 🔧 Core Modules
+
+- [ ] [01_config_loader.mdc](.cursor/rules/issue01-config-loader.mdc)
+- [ ] [02_frame_namer.mdc](.cursor/rules/issue02-frame-namer.mdc)
+- [ ] [03_path_utils.mdc](.cursor/rules/issue03-path-utils.mdc)
+- [ ] [04_twitch_capture.mdc](.cursor/rules/issue04-twitch-capture.mdc)
+- [ ] [05_capture_loop.mdc](.cursor/rules/issue05-capture-loop.mdc)
+- [ ] [06_run_script.mdc](.cursor/rules/issue06-run-script.mdc)
+- [ ] [07_frame_logging.mdc](.cursor/rules/issue07-frame-logging.mdc)

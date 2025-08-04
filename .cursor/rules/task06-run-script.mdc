@@ -1,0 +1,9 @@
+---
+alwaysApply: false
+---
+# 06: Build run.py
+
+Create a CLI script `run.py` that:
+- Loads the config
+- Resolves the stream/video path
+- Calls `capture_frames_from_*` appropriately

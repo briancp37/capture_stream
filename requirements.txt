@@ -1,0 +1,4 @@
+PyYAML>=6.0.0
+opencv-python>=4.8.0
+# Note: streamlink is required for twitch_capture.py but is typically installed via pip/conda
+# streamlink>=6.0.0 

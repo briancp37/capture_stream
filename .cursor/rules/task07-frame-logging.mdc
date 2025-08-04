@@ -1,0 +1,14 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# 07: Implement frame logging
+
+In `capture_loop.py`, if `log_metadata: true`, append to `frame_log.csv` with:
+```
+frame_index,timestamp,filename,source_type,resolution
+```
+
+
+Use `csv.writer()` in append mode. Place `frame_log.csv` in `output_dir`.

@@ -1,0 +1,15 @@
+---
+alwaysApply: false
+---
+# 02: Build frame_namer.py
+
+Create `utils/frame_namer.py` with:
+
+```python
+def generate_frame_filename(frame_index: int) -> str:
+```
+
+This should return a string like frame_20250801_145301_000012.jpg, combining:
+
+- UTC timestamp
+- Zero-padded frame number
