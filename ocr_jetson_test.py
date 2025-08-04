@@ -7,6 +7,13 @@ import torch
 
 from constants import CROP_LOCATIONS
 
+
+print("CUDA available:", torch.cuda.is_available())
+print("CUDA device count:", torch.cuda.device_count())
+print("Device name:", torch.cuda.get_device_name(0) if torch.cuda.is_available() else "No GPU")
+
+
+
 def crop_region(image_input, x, y, w, h):
     if isinstance(image_input, str):
         image = cv2.imread(image_input)
@@ -88,5 +95,6 @@ if __name__ == "__main__":
         enhance_contrast = False,
         crop_loc = CROP_LOCATIONS['ROSTER']['table_data']
     )
-
+    print(data)
+    print(f"cuda = {cuda}")
     print(f"time = {round(time.time() - t_0, 6)}")
