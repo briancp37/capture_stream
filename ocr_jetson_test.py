@@ -1,7 +1,9 @@
 import cv2
 import numpy as np
+import time
 
 import easyocr
+import torch
 
 from constants import CROP_LOCATIONS
 
@@ -70,13 +72,21 @@ def run_easyocr_on_image(image_path, use_gpu=True, preprocess=False, denoise=Fal
     return results
 
 
-path = "/Users/brianpennington/git/cfb/capture_stream/mnt/cfb_shared/screenshots/frame_20250802_171000_000049.jpg"
 
-data = run_easyocr_on_image(
-    image_path = path, 
-    use_gpu = False, 
-    preprocess = False, 
-    denoise = False,
-    enhance_contrast = False,
-    crop_loc = CROP_LOCATIONS['ROSTER']['table_data']
-)
+if __name__ == "__main__":
+
+    t_0 = time.time()
+
+    path = "/Users/brianpennington/git/cfb/capture_stream/mnt/cfb_shared/screenshots/frame_20250802_171000_000049.jpg"
+    cuda = torch.cuda.is_available()
+    print(f"cuda = {cuda}")
+    data = run_easyocr_on_image(
+        image_path = path, 
+        use_gpu = cuda, 
+        preprocess = False, 
+        denoise = False,
+        enhance_contrast = False,
+        crop_loc = CROP_LOCATIONS['ROSTER']['table_data']
+    )
+
+    print(f"time = {round(time.time() - t_0, 6)}")
